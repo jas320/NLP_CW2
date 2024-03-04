@@ -26,6 +26,8 @@ def translate_group(text_list, label_list):
 
 
 text, labels = read_list_from_file("full_data_text_list.pkl"), read_list_from_file("full_data_label_list.pkl")
-res1, res2 = translate_group(text[:3], labels[:3])
-[print(x) for x in res1]
+res1, res2 = translate_group(text, labels)
+# [print(x) for x in res1]
+write_list_to_file(res1, "3_lang_translate_text.txt")
+write_list_to_file(res2, "3_lang_labels.txt")
 
